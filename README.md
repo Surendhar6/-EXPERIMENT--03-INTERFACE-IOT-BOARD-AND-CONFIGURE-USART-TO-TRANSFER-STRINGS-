@@ -67,7 +67,7 @@ int main(void)
 
   while (1)
   {
-	  printf("karna\nCSE(IOT)");
+	  printf("karna\nCSE(IOT)\n");
 	  HAL_Delay(500);
 
   }
