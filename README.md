@@ -44,29 +44,32 @@ configure in the usart 2 as asynchronous mode and set the baud rate as 115200 as
 ## STM 32 CUBE PROGRAM :
 ```
 #include "main.h"
+#include "stdio.h"
 #if defined (__ICCARM__) || defined (__ARMCC_VERSION)
 #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
 #elif defined(__GNUC__)
+
 #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
 #endif /* __ICCARM__ || __ARMCC_VERSION */
-UART_HandleTypeDef huart2;
+
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 
 int main(void)
 {
- 
   HAL_Init();
   SystemClock_Config();
   MX_GPIO_Init();
   MX_USART2_UART_Init();
+
   while (1)
   {
-	  printf("YUVARANI\n");
+	  printf("karna\nCSE(IOT)");
 	  HAL_Delay(500);
+
   }
-  
+ 
 }
 PUTCHAR_PROTOTYPE
 {
@@ -75,12 +78,15 @@ PUTCHAR_PROTOTYPE
 
   return ch;
 }
+
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+
+
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE2);
-  
+
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
   RCC_OscInitStruct.MSICalibrationValue = RCC_MSICALIBRATION_DEFAULT;
@@ -135,29 +141,35 @@ static void MX_USART2_UART_Init(void)
   {
     Error_Handler();
   }
+ 
+
 }
+
 
 static void MX_GPIO_Init(void)
 {
+
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
 }
+
 void Error_Handler(void)
 {
+
   __disable_irq();
   while (1)
   {
   }
- 
+
 }
 
 #ifdef  USE_FULL_ASSERT
-
 void assert_failed(uint8_t *file, uint32_t line)
 {
-  
+
 }
-#endif
+#endif 
+
 ```
 ## Output screen shots of Serial port utility   :
  
@@ -165,4 +177,4 @@ void assert_failed(uint8_t *file, uint32_t line)
 
  
 ## Result :
-configuring and usart is accomplished and string data is visualized on the serial port utilty
+Configuring and usart is accomplished and string data is visualized on the serial port utilty
