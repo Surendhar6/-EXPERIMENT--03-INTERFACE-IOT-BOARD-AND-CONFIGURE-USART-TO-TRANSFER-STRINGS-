@@ -67,7 +67,7 @@ int main(void)
 
   while (1)
   {
-	  printf("karna\nCSE(IOT)\n");
+	  printf("INTODUCTION TO IOT\n");
 	  HAL_Delay(500);
 
   }
@@ -175,7 +175,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 ```
 ## Output screen shots of Serial port utility   :
  
- ![iot-exp-3](https://github.com/Surendhar6/-EXPERIMENT--03-INTERFACE-IOT-BOARD-AND-CONFIGURE-USART-TO-TRANSFER-STRINGS-/assets/118352907/bbf57b6f-d0f4-4fe2-b64b-61a338f2df77)
+ ![image](https://github.com/Surendhar6/-EXPERIMENT--03-INTERFACE-IOT-BOARD-AND-CONFIGURE-USART-TO-TRANSFER-STRINGS-/assets/118352907/00c262e8-1015-4feb-b273-bd26f3d0e326)
 
  
 ## Result :
